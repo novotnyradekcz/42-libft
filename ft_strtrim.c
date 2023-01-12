@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:30:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/12 21:18:48 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/12 22:29:49 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	if (trimmed == 0)
 		return (0);
 	trimmed[j] = '\0';
-	while (j-- < 0)
+	while (j-- > 0)
 		trimmed[j] = s1[i + j];
 	return (trimmed);
 }
