@@ -6,9 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:47:17 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/12 22:41:09 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/13 17:28:49 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// TOTO: split with every occurence of delimiter: e. g. ccc gives null, null
 
 #include <stdlib.h>
 
