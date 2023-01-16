@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 13:14:18 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:23:39 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:42:27 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void	ft_special(int n, int fd)
 		write(fd, "0", 1);
 }
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	char	buf[10];
 	int		i;

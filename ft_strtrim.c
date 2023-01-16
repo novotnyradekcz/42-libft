@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:30:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 12:37:39 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:44:26 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ static int	ft_inset(char c, char const *set)
 	i = 0;
 	while (set[i] != '\0')
 	{
-		if (c = set[i])
+		if (c == set[i])
 			return (1);
 		i++;
 	}
 	return (0);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
@@ -39,7 +39,7 @@ char *ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (!ft_inset(s1[i], set) || s1[i + j] != '\0')
 		j++;
-	trimmed = (char* )malloc((i + j) * sizeof(char));
+	trimmed = (char *)malloc((i + j) * sizeof(char));
 	if (trimmed == 0)
 		return (0);
 	trimmed[j] = '\0';

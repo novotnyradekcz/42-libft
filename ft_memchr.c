@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:48:48 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/10 13:31:16 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:43:15 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (s[i] == c)
-			return &s[i];
+			return (&s[i]);
 		i++;
 	}
 	return (0);

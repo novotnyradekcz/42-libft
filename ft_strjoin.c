@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:06:23 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:07:03 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:40:52 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	len1;
-	int len2;
-	int	i;
-	char *joined;
-	
+	int		len1;
+	int		len2;
+	int		i;
+	char	*joined;
+
 	i = 0;
 	while (s1[i] != '\0')
 		i++;
@@ -33,7 +33,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	{
 		if (i < len1)
 			joined[i] = s1[i];
-		else joined[i] = s2[i - len1];
+		else
+			joined[i] = s2[i - len1];
 		i++;
 	}
 	joined[i] = '\0';
