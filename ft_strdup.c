@@ -6,11 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:25:24 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/10 13:45:49 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 12:35:49 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {

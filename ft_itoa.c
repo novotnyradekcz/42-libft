@@ -6,11 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:13:08 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/13 17:08:59 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 12:33:50 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_neg(int n)
 {

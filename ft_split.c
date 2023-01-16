@@ -6,29 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:47:17 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/13 17:28:49 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 12:34:11 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// TOTO: split with every occurence of delimiter: e. g. ccc gives null, null
-
-#include <stdlib.h>
-
-static int	ft_count(char const *s, char c)
-{
-	int	i;
-	int	count;
-
-	i = 0;
-	count = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-			count++;
-		i++;
-	}
-	return (count);
-}
+#include "libft.h"
 
 static void	ft_cpy(char **result, char *s, char c)
 {
@@ -41,7 +23,7 @@ static void	ft_cpy(char **result, char *s, char c)
 	k = 0;
 	while (s[i] != '\0')
 	{
-		while (s[i] == c)
+		if (s[i] == c)
 			i++;
 		j = 0;
 		while (s[i + j] != c)
@@ -60,8 +42,15 @@ char	**ft_split(char const *s, char *c)
 {
 	char	**result;
 	int		size;
+	int		i;
 
-	size = ft_count(s, c);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			size++;
+		i++;
+	}
 	result = (char **)malloc((size + 1) * sizeof(char *));
 	result[size] = 0;
 	ft_cpy(result, s, c);
