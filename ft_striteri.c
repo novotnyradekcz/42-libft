@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 12:24:24 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:05:09 by rnovotny         ###   ########.fr       */
+/*   Created: 2023/01/16 12:48:23 by rnovotny          #+#    #+#             */
+/*   Updated: 2023/01/16 13:08:42 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-void	*calloc(size_t nmemb, size_t size)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	return (malloc(nmemb * size));
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, s[i]);
+		i++;
+	}
 }

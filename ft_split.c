@@ -6,11 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:47:17 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 12:34:11 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:06:26 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static void	ft_cpy(char **result, char *s, char c)
 {

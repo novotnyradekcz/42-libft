@@ -6,11 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:50:28 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 12:38:02 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:07:46 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {

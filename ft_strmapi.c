@@ -6,17 +6,25 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 17:09:10 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 12:41:07 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/16 13:07:21 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int	i;
-	int	len;
+	char *result;
 
-	len = ft_strlen(s);
-	
+	i = 0;
+	result = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	while (i < ft_strlen(s))
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	result[i] = '\0';
+	return (result);
 }

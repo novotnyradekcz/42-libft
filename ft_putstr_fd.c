@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 12:24:24 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:05:09 by rnovotny         ###   ########.fr       */
+/*   Created: 2023/01/16 13:00:24 by rnovotny          #+#    #+#             */
+/*   Updated: 2023/01/16 13:06:05 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
+#include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
+void ft_putstr_fd(char *s, int fd)
 {
-	return (malloc(nmemb * size));
+	write(fd, s, ft_strlen(s));
 }
