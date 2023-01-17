@@ -6,12 +6,14 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:05:50 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/17 15:11:10 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/17 15:22:24 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include <stdlib.h>
 
 typedef struct s_list
 {
