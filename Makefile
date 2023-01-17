@@ -9,6 +9,9 @@ SRCS = ft_atoi.c     ft_itoa.c        ft_putnbr_fd.c  ft_strlcpy.c  ft_tolower.c
 	ft_isdigit.c  ft_putchar_fd.c  ft_strjoin.c    ft_strtrim.c \
 	ft_isprint.c  ft_putendl_fd.c  ft_strlcat.c    ft_substr.c
 
+BONUSSRCS = ft_lstadd_back.c	ft_lstadd_front.c	ft_lstclear.c \
+	ft_lstdelone.c	ft_lstiter.c	ft_lstlast.c \
+	ft_lstmap.c	ft_lstnew.c	ft_lstsize.c
 
 OFILES = ft_atoi.o     ft_itoa.o        ft_putnbr_fd.o  ft_strlcpy.o  ft_tolower.o \
 	ft_bzero.o    ft_memchr.o      ft_putstr_fd.o  ft_strlen.o   ft_toupper.o \
@@ -18,6 +21,10 @@ OFILES = ft_atoi.o     ft_itoa.o        ft_putnbr_fd.o  ft_strlcpy.o  ft_tolower
 	ft_isascii.o  ft_memset.o      ft_striteri.o   ft_strrchr.o \
 	ft_isdigit.o  ft_putchar_fd.o  ft_strjoin.o    ft_strtrim.o \
 	ft_isprint.o  ft_putendl_fd.o  ft_strlcat.o    ft_substr.o
+
+BONUSOFILES = ft_lstadd_back.o	ft_lstadd_front.o	ft_lstclear.o \
+	ft_lstdelone.o	ft_lstiter.o	ft_lstlast.o \
+	ft_lstmap.o	ft_lstnew.o	ft_lstsize.o
 
 INCLUDES = libft.h
 
@@ -31,8 +38,14 @@ $(LIBRARY):	$(OFILES)
 $(OFILES):	$(SRCS) $(INCLUDES)
 	cc -c $(FLAGS) -I $(INCLUDES) $< -o $@
 
+bonus:	$(OFILES) $(BONUSOFILES)
+	ar rc $(LIBRARY) $(OFILES) $(BONUSOFILES)
+
+$(BONUSOFILES):	$(BONUSSRCS) $(INCLUDES)
+	cc -c $(FLAGS) -I $(INCLUDES) $< -o $@
+
 clean:
-	rm -f $(OFILES)
+	rm -f $(OFILES) $(BONUSOFILES)
 
 fclean:	clean
 	rm -f $(LIBRARY)
