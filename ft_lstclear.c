@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:55:08 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/17 15:04:41 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/18 20:32:31 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,15 @@
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*node;
-	t_list	*toFree;
+	t_list	*tofree;
 
 	node = lst;
 	while (node->next != 0)
+	{
 		del(node->content);
-		toFree = node;
+		tofree = node;
 		node = node->next;
-		free(toFree);
+		free(tofree);
+	}
 	lst = 0;
 }

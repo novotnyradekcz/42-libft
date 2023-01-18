@@ -6,22 +6,23 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:49:00 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/10 13:28:42 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/18 21:44:14 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	int		i;
-	char	temp[2147483647];
+	char	*pdest;
+	char	*psrc;
 
+	pdest = (char *)dest;
+	psrc = (char *)src;
 	i = 0;
 	while (i < n)
 	{
-		temp[i] = src[i];
+		pdest[i] = psrc[i];
 		i++;
 	}
-	while (i-- > 0)
-		dest[i] = temp[i];
 	return (dest);
 }

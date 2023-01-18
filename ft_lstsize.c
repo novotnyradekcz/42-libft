@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:10:46 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/17 14:20:58 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/18 20:33:43 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
-	t_list *node;
+	int		i;
+	t_list	*node;
 
 	i = 0;
 	node = lst->next;

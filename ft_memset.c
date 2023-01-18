@@ -6,18 +6,21 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:47:45 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/17 15:28:40 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/18 21:29:39 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
+	char	*p;
+	int		i;
 
 	i = 0;
+	p = s;
 	while (i < n)
 	{
-		s[i] = c;
+		p[i] = c;
 		i++;
 	}
+	return (s);
 }
