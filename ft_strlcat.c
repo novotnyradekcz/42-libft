@@ -6,9 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:33:21 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/13 17:27:56 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/18 22:56:39 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, char *src, size_t size)
 {

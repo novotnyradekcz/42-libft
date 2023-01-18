@@ -6,14 +6,16 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:48:48 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/18 21:52:21 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/18 23:00:10 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	char	*ps;
-	int		i;
+	size_t	i;
 
 	ps = (char *)s;
 	i = 0;

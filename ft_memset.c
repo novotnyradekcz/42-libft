@@ -6,9 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:47:45 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/18 21:29:39 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/18 22:56:11 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

@@ -6,13 +6,15 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:33:02 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:38:25 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/18 22:58:15 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 size_t	strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < size - 1 && src[i] != '\0')
