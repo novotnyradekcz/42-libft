@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:30:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:44:26 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:22:08 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
-	int		k;
 	char	*trimmed;
 
 	i = 0;

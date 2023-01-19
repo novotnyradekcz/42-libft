@@ -6,13 +6,13 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:47:17 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:39:12 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:09:27 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static void	ft_cpy(char **result, char *s, char c)
+static void	ft_cpy(char **result, char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -38,13 +38,14 @@ static void	ft_cpy(char **result, char *s, char c)
 	}
 }
 
-char	**ft_split(char const *s, char *c)
+char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	int		size;
 	int		i;
 
 	i = 0;
+	size = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)

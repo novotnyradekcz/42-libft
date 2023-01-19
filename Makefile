@@ -1,6 +1,6 @@
 LIBRARY = libft.a
 
-SRCS = ft_atoi.c     ft_itoa.c        ft_putnbr_fd.c  ft_strlcpy.c  ft_tolower.c \
+SRCS = ft_atoi.c	ft_itoa.c        ft_putnbr_fd.c  ft_strlcpy.c  ft_tolower.c \
 	ft_bzero.c    ft_memchr.c      ft_putstr_fd.c  ft_strlen.c   ft_toupper.c \
 	ft_calloc.c   ft_memcmp.c      ft_split.c      ft_strmapi.c \
 	ft_isalnum.c  ft_memcpy.c      ft_strchr.c     ft_strncmp.c \
@@ -13,36 +13,24 @@ BONUSSRCS = ft_lstadd_back.c	ft_lstadd_front.c	ft_lstclear.c \
 	ft_lstdelone.c	ft_lstiter.c	ft_lstlast.c \
 	ft_lstmap.c	ft_lstnew.c	ft_lstsize.c
 
-OFILES = ft_atoi.o     ft_itoa.o        ft_putnbr_fd.o  ft_strlcpy.o  ft_tolower.o \
-	ft_bzero.o    ft_memchr.o      ft_putstr_fd.o  ft_strlen.o   ft_toupper.o \
-	ft_calloc.o   ft_memcmp.o      ft_split.o      ft_strmapi.o \
-	ft_isalnum.o  ft_memcpy.o      ft_strchr.o     ft_strncmp.o \
-	ft_isalpha.o  ft_memmove.o     ft_strdup.o     ft_strnstr.o \
-	ft_isascii.o  ft_memset.o      ft_striteri.o   ft_strrchr.o \
-	ft_isdigit.o  ft_putchar_fd.o  ft_strjoin.o    ft_strtrim.o \
-	ft_isprint.o  ft_putendl_fd.o  ft_strlcat.o    ft_substr.o
+OFILES := ${SRCS:.c=.o}
 
-BONUSOFILES = ft_lstadd_back.o	ft_lstadd_front.o	ft_lstclear.o \
-	ft_lstdelone.o	ft_lstiter.o	ft_lstlast.o \
-	ft_lstmap.o	ft_lstnew.o	ft_lstsize.o
+BONUSOFILES := ${BONUSSRCS:.c=.o}
 
 INCLUDES = libft.h
 
 FLAGS = -Wall -Wextra -Werror
+
+.c.o:
+	cc -c $(FLAGS) -I $(INCLUDES) $< -o ${<:.c=.o}
 
 all:	$(LIBRARY)
 
 $(LIBRARY):	$(OFILES)
 	ar rc $(LIBRARY) $(OFILES)
 
-$(OFILES):	$(SRCS) $(INCLUDES)
-	cc -c $(FLAGS) -I $(INCLUDES) $< -o $@
-
 bonus:	$(OFILES) $(BONUSOFILES)
 	ar rc $(LIBRARY) $(OFILES) $(BONUSOFILES)
-
-$(BONUSOFILES):	$(BONUSSRCS) $(INCLUDES)
-	cc -c $(FLAGS) -I $(INCLUDES) $< -o $@
 
 clean:
 	rm -f $(OFILES) $(BONUSOFILES)

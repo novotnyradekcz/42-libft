@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:48:48 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/18 22:56:00 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/19 17:05:34 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*p;
 
 	p = dest;

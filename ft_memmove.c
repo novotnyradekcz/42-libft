@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:49:00 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/18 22:56:07 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:14:31 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*pdest;
 	char	*psrc;
 

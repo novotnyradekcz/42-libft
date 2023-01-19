@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 13:48:48 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/18 22:55:57 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/19 17:05:25 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int		i;
+	size_t	i;
 	char	*ps1;
 	char	*ps2;
 

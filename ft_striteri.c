@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:48:23 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:39:32 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/19 16:19:27 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i] != '\0')
 	{
-		f(i, s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
