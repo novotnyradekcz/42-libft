@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:21:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/18 20:32:55 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/19 17:17:06 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ t_list	*ft_lstlast(t_list *lst)
 
 	node = lst;
 	while (node->next != 0)
-		node = &(node->next);
+		node = node->next;
 	return (node);
 }
