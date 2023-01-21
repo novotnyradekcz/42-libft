@@ -6,11 +6,10 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 17:09:10 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/19 17:04:59 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 18:10:16 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

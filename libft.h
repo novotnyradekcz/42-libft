@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:05:50 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/19 17:08:41 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 18:13:16 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {

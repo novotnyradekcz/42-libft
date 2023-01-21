@@ -6,11 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 13:14:18 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/16 13:42:27 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 18:11:13 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 static void	ft_special(int n, int fd)
 {
