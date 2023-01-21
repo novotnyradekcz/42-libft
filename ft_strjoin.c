@@ -6,12 +6,11 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:06:23 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 18:10:43 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 18:18:24 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 12:24:24 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 18:14:12 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 18:17:45 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*calloc(size_t nmemb, size_t size)
 {
 	void	*result;
-	
+
 	result = malloc(nmemb * size);
 	if (result == 0)
 		return (0);
