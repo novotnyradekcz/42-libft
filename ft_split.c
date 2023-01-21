@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:47:17 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 21:13:35 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 23:52:42 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_freeall(char **result, int k)
 	return (1);
 }
 
-static int	ft_cpy(char **result, char const *s, char c)
+static int	ft_cpy(char **result, char const *s, char c, int size)
 {
 	int	i;
 	int	j;
@@ -29,9 +29,9 @@ static int	ft_cpy(char **result, char const *s, char c)
 
 	i = 0;
 	k = 0;
-	while (s[i] != '\0')
+	while (k < size)
 	{
-		if (s[i] == c)
+		while (s[i] == c)
 			i++;
 		j = 0;
 		while (s[i + j] != c && s[i + j] != '\0')
@@ -59,7 +59,7 @@ char	**ft_split(char const *s, char c)
 	size = 0;
 	while (s[i] != '\0')
 	{
-		if ((i != 0 && s[i] == c) || (s[i] != c && s[i + 1] == '\0'))
+		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0'))
 			size++;
 		i++;
 	}
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 	if (!result)
 		return (0);
 	result[size] = 0;
-	if (ft_cpy(result, s, c))
+	if (ft_cpy(result, s, c, size))
 		return (0);
 	return (result);
 }
