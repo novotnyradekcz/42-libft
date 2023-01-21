@@ -6,13 +6,13 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:33:36 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 18:10:50 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 18:27:58 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int		i;
 	char	*result;

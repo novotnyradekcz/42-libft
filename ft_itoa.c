@@ -6,20 +6,21 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:13:08 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 18:18:03 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 19:39:58 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static int	ft_neg(int n)
+static size_t	ft_neg(int n)
 {
 	if (n < 0)
 		return (-n);
 	return (n);
 }
 
-static int	ft_len(int n, int num)
+static size_t	ft_len(int n, size_t num)
 {
 	int	l;
 
@@ -34,30 +35,53 @@ static int	ft_len(int n, int num)
 	return (l);
 }
 
-char	*ft_itoa(int n)
+static void	ft_convert(int n, size_t num, size_t l, char *result)
 {
-	int		i;
-	int		num;
-	int		l;
-	char	*result;
+	size_t	i;
+	size_t	j;
+	size_t	ten;
 
 	i = 0;
+	j = 0;
+	if (n < 0)
+	{
+		result[i] = '-';
+		i++;
+	}
+	ten = 1;
+	while (j++ < (l - i - 1))
+		ten *= 10;
+	while (i < l)
+	{
+		result[i] = num / ten + 48;
+		num %= ten;
+		ten /= 10;
+		i++;
+	}
+	result[i] = '\0';
+}
+
+char	*ft_itoa(int n)
+{
+	size_t	num;
+	size_t	l;
+	char	*result;
+
+	if (n == -2147483648)
+	{
+		result = (char *)malloc(12 * sizeof(char));
+		result = "-2147483648";
+		return (result);
+	}
 	l = 0;
 	num = ft_neg(n);
 	l = ft_len(n, num);
 	result = (char *)malloc((l + 1) * sizeof(char));
 	if (result == 0)
 		return (0);
-	if (n < 0)
-	{
-		result[i] = '-';
-		i++;
-	}
-	while (i < l)
-	{
-		result[i] = num % (10 * (l - i)) + 48;
-		i++;
-	}
-	result[i] = '\0';
+	if (n == 0)
+		result = "0";
+	else
+		ft_convert(n, num, l, result);
 	return (result);
 }
