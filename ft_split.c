@@ -6,13 +6,21 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:47:17 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 18:10:57 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/21 21:13:35 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_cpy(char **result, char const *s, char c)
+static int	ft_freeall(char **result, int k)
+{
+	while (k-- > 0)
+		free(result[k]);
+	free(result);
+	return (1);
+}
+
+static int	ft_cpy(char **result, char const *s, char c)
 {
 	int	i;
 	int	j;
@@ -26,16 +34,19 @@ static void	ft_cpy(char **result, char const *s, char c)
 		if (s[i] == c)
 			i++;
 		j = 0;
-		while (s[i + j] != c)
+		while (s[i + j] != c && s[i + j] != '\0')
 			j++;
 		l = j;
 		result[k] = (char *)malloc((l + 1) * sizeof(char));
+		if (!result[k])
+			return (ft_freeall(result, k));
 		result[k][j] = '\0';
 		while (j-- > 0)
 			result[k][j] = s[i + j];
 		i += l;
 		k++;
 	}
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -48,12 +59,15 @@ char	**ft_split(char const *s, char c)
 	size = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if ((i != 0 && s[i] == c) || (s[i] != c && s[i + 1] == '\0'))
 			size++;
 		i++;
 	}
 	result = (char **)malloc((size + 1) * sizeof(char *));
+	if (!result)
+		return (0);
 	result[size] = 0;
-	ft_cpy(result, s, c);
+	if (ft_cpy(result, s, c))
+		return (0);
 	return (result);
 }
