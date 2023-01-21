@@ -14,5 +14,11 @@
 
 void	*calloc(size_t nmemb, size_t size)
 {
-	return (malloc(nmemb * size));
+	void	*result;
+	
+	result = malloc(nmemb * size);
+	if (result == 0)
+		return (0);
+	bzero(result, nmemb * size);
+	return (result);
 }
