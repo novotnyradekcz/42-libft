@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:13:08 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/22 01:38:46 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/22 18:27:05 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,7 @@ char	*ft_itoa(int n)
 	char	*result;
 
 	if (n == -2147483648)
-	{
-		result = (char *)malloc(12 * sizeof(char));
-		result = "-2147483648";
-		return (result);
-	}
+		return (ft_strdup("-2147483648"));
 	l = 0;
 	num = ft_neg(n);
 	l = ft_len(n, num);
