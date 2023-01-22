@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/09 14:34:27 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/19 17:04:35 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/22 00:41:49 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	char	*result;
 
 	result = (char *)big;
-	if (little[0] == '\0')
+	if (little[0] == '\0' || little == big)
 		return (result);
 	i = 0;
 	while (i < len && big[i] != '\0')

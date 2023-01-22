@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:13:08 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 20:35:24 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/22 01:38:46 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static size_t	ft_len(int n, size_t num)
 	int	l;
 
 	l = 0;
-	if (n < 0)
+	if (n <= 0)
 		l++;
 	while (num > 0)
 	{

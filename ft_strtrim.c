@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:30:11 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 20:35:06 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/22 01:10:29 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (s1[i + j] != '\0')
 		j++;
-	j--;
-	while (ft_inset(s1[i + j], set))
+	while (ft_inset(s1[i + j - 1], set))
 		j--;
-	j++;
+	if (j < 0)
+		j = 0;
 	trimmed = (char *)malloc((j + 1) * sizeof(char));
 	if (trimmed == 0)
 		return (0);

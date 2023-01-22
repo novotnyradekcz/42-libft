@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:06:23 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 20:18:28 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/22 01:27:40 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	char	*joined;
 
+	if (!s1 || !s2)
+		return (0);
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
 	i = 0;

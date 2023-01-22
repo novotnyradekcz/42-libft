@@ -6,7 +6,7 @@
 /*   By: rnovotny <rnovotny@student.42prague.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:47:17 by rnovotny          #+#    #+#             */
-/*   Updated: 2023/01/21 23:52:42 by rnovotny         ###   ########.fr       */
+/*   Updated: 2023/01/22 01:26:29 by rnovotny         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char	**ft_split(char const *s, char c)
 	int		size;
 	int		i;
 
+	if (!s)
+		return (0);
 	i = 0;
 	size = 0;
 	while (s[i] != '\0')
