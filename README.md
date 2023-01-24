@@ -1,5 +1,5 @@
 # Libft
-The first project of the 42 core curriculum, a library of useful functions. Created at 42 Prague in January 2023. All funcions (including bonus) passed Moulinette.
+The first project of the 42 core curriculum, a library of useful functions. Created at 42 Prague in January 2023. All functions (including bonus) passed Moulinette.
 
 ## Included functions:
 
